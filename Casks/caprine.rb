@@ -4,12 +4,10 @@ cask "caprine" do
          intel: "cdc47753e4c274a237252eb47e2f1479d1944a74b939cdc5c4b90d3fd3367b1a"
 
   on_arm do
-    url "https://github.com/bankjaneo/caprine/releases/download/v#{version}/Caprine-#{version}-arm64.dmg",
-        verified: "github.com/bankjaneo/caprine/"
+    url "https://github.com/bankjaneo/caprine/releases/download/v#{version}/Caprine-#{version}-arm64.dmg"
   end
   on_intel do
-    url "https://github.com/bankjaneo/caprine/releases/download/v#{version}/Caprine-#{version}.dmg",
-        verified: "github.com/bankjaneo/caprine/"
+    url "https://github.com/bankjaneo/caprine/releases/download/v#{version}/Caprine-#{version}.dmg"
   end
 
   name "Caprine"
