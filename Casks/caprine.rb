@@ -27,6 +27,14 @@ cask "caprine" do
 
   app "Caprine.app"
 
+  # The app is not notarized yet (no Apple Developer certificate), so remove the
+  # quarantine xattr that Homebrew applies; otherwise macOS reports the app as
+  # "damaged". Remove this once builds are signed and notarized.
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Caprine.app"]
+  end
+
   zap trash: [
     "~/Library/Application Support/Caprine",
     "~/Library/Caches/com.sindresorhus.Caprine",
