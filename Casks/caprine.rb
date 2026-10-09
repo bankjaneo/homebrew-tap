@@ -25,7 +25,7 @@ cask "caprine" do
 
   # Updates are owned by brew; the in-app updater is disabled for unsigned builds.
   auto_updates false
-  depends_on mac: ">= :big_sur"
+  depends_on macos: ">= :big_sur"
   depends_on :macos
 
   app "Caprine.app"
