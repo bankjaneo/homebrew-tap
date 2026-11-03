@@ -1,7 +1,7 @@
 cask "caprine" do
-  version "2.62.0"
-  sha256 arm:   "84da346727956d28955d13c47882c55f720563fff8190fd8127ed7c568c326e5",
-         intel: "cdc47753e4c274a237252eb47e2f1479d1944a74b939cdc5c4b90d3fd3367b1a"
+  version "2.62.1"
+  sha256 arm:   "dfbb97be2ed85cce4acb30c6e2f9ab90bcede32007e29f188bed5ab08b7efeac",
+         intel: "dc0c83d3c189df85e253e60f875f81090be69d63183aa891a4a2e7272e070c68"
 
   on_arm do
     url "https://github.com/bankjaneo/caprine/releases/download/v#{version}/Caprine-#{version}-arm64.dmg"
