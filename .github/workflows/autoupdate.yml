@@ -2,8 +2,12 @@ name: Autoupdate caprine cask
 
 on:
   schedule:
-    - cron: '23 6 * * *'
+    - cron: '23 6,18 * * *'
   workflow_dispatch:
+
+concurrency:
+  group: autoupdate-caprine
+  cancel-in-progress: false
 
 permissions:
   contents: write
