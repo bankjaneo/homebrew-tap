@@ -1,8 +1,13 @@
 name: Autoupdate caprine cask
 
 on:
+  # Fired by bankjaneo/caprine's build workflow right after the DMGs are uploaded
+  # to a stable release, so the cask updates in minutes instead of on a timer.
+  repository_dispatch:
+    types: [caprine-release]
+  # Fallback only: catches failed dispatches and anything that slipped through.
   schedule:
-    - cron: '23 6,18 * * *'
+    - cron: '23 6 * * *'
   workflow_dispatch:
 
 concurrency:
